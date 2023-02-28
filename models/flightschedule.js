@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.Airplane = this.belongsTo(models['Airplane']);
+      this.BoardingTickets = this.hasMany(models['BoardingTicket']);
     }
   }
   FlightSchedule.init({
